@@ -14,5 +14,5 @@ def print_directory_structure(root_directory):
         ext_info = ', '.join([f"{ext}: {count} files" for ext, count in extension_count.items()])
         print(f"{indent}├── {os.path.basename(root)}/ {ext_info}")
 
-root_directory = r"D:\Desktop\pretreatment-example"
+root_directory = r"E:"
 print_directory_structure(root_directory)
