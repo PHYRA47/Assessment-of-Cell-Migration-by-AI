@@ -118,7 +118,7 @@ def process_tif_video(tif_file_path, converted_folder_path, processed_folder_pat
 
 
 # --- MAIN SCRIPT TO PROCESS ALL TIFF FILES IN A FOLDER ---
-root_directory = r"D:\Desktop\pretreatment-example"  # Path to the folder containing TIFF files
+root_directory = r"E:\WT - 01-06-10 Months"  # Path to the folder 
 
 # Initialize counters
 total_tiff_files = 0
@@ -141,8 +141,8 @@ with open(csv_file_path, mode="w", newline="") as csv_file:
                 os.makedirs(videos_pretreated_path, exist_ok=True)
 
                 # Create subfolders for converted and processed videos
-                converted_folder = os.path.join(videos_pretreated_path, "converted")
-                processed_folder = os.path.join(videos_pretreated_path, "processed")
+                converted_folder = os.path.join(videos_pretreated_path, "converted") # for conversion to 8-bit
+                processed_folder = os.path.join(videos_pretreated_path, "processed") # for global brightness adjustment
                 os.makedirs(converted_folder, exist_ok=True)
                 os.makedirs(processed_folder, exist_ok=True)
                 
