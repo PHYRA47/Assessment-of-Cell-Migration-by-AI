@@ -24,18 +24,18 @@ FRAME_FORMAT = "frame_{:05d}_{}.png"
 LABEL_FORMAT = "frame_{:05d}_{}.txt"
 
 # Gaussian parameters for width and height
-WIDTH_MEAN = 0.035786445504926115
-WIDTH_VARIANCE = 0.00040012605749557714
-HEIGHT_MEAN = 0.037549450549450546
-HEIGHT_VARIANCE = 0.00042180403181982863
+WIDTH_MEAN = 0.05 # 0.035786445504926115
+WIDTH_VARIANCE = 0.0000001 # 0.00040012605749557714
+HEIGHT_MEAN = 0.066
+HEIGHT_VARIANCE = 0.0000001 # 0.00042180403181982863
 
 def process_videos_and_labels(root_dir):
     print("========================================================")
     print("[START] process_videos_and_labels")
     print("========================================================")
 
-    images_path = os.path.join(root_dir, IMAGE_FOLDER)
-    labels_path = os.path.join(root_dir, LABEL_FOLDER)
+    images_path = os.path.join(root_dir, "dataset", IMAGE_FOLDER)
+    labels_path = os.path.join(root_dir, "dataset", LABEL_FOLDER)
     os.makedirs(images_path, exist_ok=True)
     os.makedirs(labels_path, exist_ok=True)
     print(f"-> Created output directories:\n   {images_path}\n   {labels_path}")

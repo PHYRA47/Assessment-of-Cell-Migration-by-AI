@@ -1,0 +1,20 @@
+# Goes in the same directory as the dataset folder
+
+# dataset/
+# │── images/
+# │   ├── train/  (80% of images)
+# │   ├── val/    (10% of images)
+# │   ├── test/   (10% of images)
+# │── labels/
+# │   ├── train/  (80% of labels)
+# │   ├── val/    (10% of labels)
+# │   ├── test/   (10% of labels)
+# │── data.yaml
+
+
+train: dataset/images/train  # Path to train images
+val: dataset/images/val      # Path to validation images
+test: dataset/images/test    # Path to test images (optional)
+
+nc: 1  # Number of classes
+names: ["cell"]  # Class names
